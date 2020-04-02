@@ -3,6 +3,7 @@ import sys
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, confusion_matrix
@@ -17,7 +18,10 @@ def build_model(f):
     tweets_subset = pos_100.append(neg_100)
     tweets_subset.reset_index(inplace=True)
 
+    # testing with smaller subset of tweets
     tweets_subset = sentiment_process.clean_tweets(tweets_subset)
+
+    #tweets_subset = sentiment_process.clean_tweets(tweets_df)
 
     X_train, X_test, y_train, y_test = train_test_split(tweets_subset['tidy_text'], tweets_subset['target'],
                                                         test_size=0.2)

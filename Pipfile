@@ -13,7 +13,7 @@ numpy = "*"
 nltk = "*"
 wordcloud = "*"
 matplotlib = "*"
-tkinter = "*"
+scikit-learn = "*"
 
 [requires]
 python_version = "3.8"

@@ -26,3 +26,4 @@ if (len(sys.argv) > 1):
   if output_file: 
     with open(output_file, 'w') as outfile:
       json.dump(tweets_dict, outfile, indent=2)
+
