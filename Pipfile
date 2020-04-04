@@ -14,6 +14,8 @@ nltk = "*"
 wordcloud = "*"
 matplotlib = "*"
 scikit-learn = "*"
+python-twitter = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"

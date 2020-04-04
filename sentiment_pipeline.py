@@ -10,7 +10,7 @@ if "-o" in query:
     output_json = query[query.index("-o") + 1]
     output_csv = output_json.replace('json', 'csv')
 
-#twitterscraper_to_csv(sys.argv)
+twitterscraper_to_csv(sys.argv)
 
 tweets_df = gen_dataframe(output_csv)
 cleaned_tweets_df = clean_tweets(tweets_df)
